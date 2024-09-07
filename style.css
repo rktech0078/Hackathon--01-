@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .resume-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .resume-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1.name {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-details {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .education-item, .work-item {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills-list li {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-list li:hover {
+    background-color: #45a049;
+  }
+  
+  .toggle-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; 
+  }
+  
+  .toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #skills-section {
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    max-height: 500px; 
+    overflow: hidden;
+    opacity: 1;
+  }
+  
+  .hidden {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .resume-container {
+      padding: 15px;
+    }
+  
+    .skills-list {
+      display: block;
+    }
+  
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
