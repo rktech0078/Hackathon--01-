@@ -2,6 +2,9 @@ alert("Welcome to my resume generator! Please fill out the form below to generat
 
 const form = document.getElementById('resume-form') as HTMLFormElement;
 const resumeOutput = document.getElementById('resume-output') as HTMLElement;
+const shareableLinkContainer = document.getElementById('shareable-link-container') as HTMLElement;
+const shareableLink = document.getElementById('shareable-link') as HTMLElement;
+const downloadPdfButton = document.getElementById('download-pdf') as HTMLButtonElement;
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -12,6 +15,7 @@ form.addEventListener('submit', (e) => {
   const skills = (document.getElementById('skills') as HTMLInputElement).value.split(',');
   const workExperience = (document.getElementById('work-experience') as HTMLInputElement).value;
 
+  // Generate resume content dynamically
   resumeOutput.innerHTML = `
     <section class="personal-info">
       <h1 class="name editable" contenteditable="true">${name}</h1>
@@ -35,4 +39,30 @@ form.addEventListener('submit', (e) => {
   `;
 
   resumeOutput.style.display = 'block';
+
+  // Generate unique shareable link
+  const username = name.toLowerCase().replace(/\s+/g, ''); // Create username from name
+  const uniqueUrl = `https://${username}.vercel.app/resume`;
+  shareableLink.innerHTML = `<a href="${uniqueUrl}" target="_blank">${uniqueUrl}</a>`;
+  shareableLinkContainer.style.display = 'block';
+
+  // PDF download logic
+  downloadPdfButton.addEventListener('click', () => {
+    generatePdf(name, email, education, skills, workExperience);
+  });
 });
+
+// Function to generate the PDF
+function generatePdf(name: string, email: string, education: string, skills: string[], workExperience: string) {
+  const pdfContent = `
+    Name: ${name}
+    Email: ${email}
+    Education: ${education}
+    Skills: ${skills.join(', ')}
+    Work Experience: ${workExperience}
+  `;
+
+  const pdfWindow = window.open('', '_blank');
+  pdfWindow?.document.write(`<pre>${pdfContent}</pre>`);
+  pdfWindow?.print();
+}
