@@ -1,4 +1,4 @@
-alert("Welcome to our static rusume");
+alert("Welcome to my static resume!");
 var toggleButton1 = document.getElementById('toggle-skills');
 var skillsSection = document.getElementById('skills-section');
 toggleButton1.addEventListener('click', function () {

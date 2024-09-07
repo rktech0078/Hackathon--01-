@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <center>
+        <nav>
+            <a href="index.html"><img src="images/home.png" alt="Home" height="70"></a>
+        </nav>
+    </center>
+
+
+    <div class="form-container">
+        <form id="resume-form">
+            <h2>Fill in your details</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <input type="text" id="education" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills (comma-separated)</label>
+                <input type="text" id="skills" required>
+            </div>
+            <div class="form-group">
+                <label for="work-experience">Work Experience</label>
+                <input type="text" id="work-experience" required>
+            </div>
+            <button type="submit" class="submit-btn">Generate Resume</button>
+        </form>
+
+        <div id="resume-output" class="resume-container" style="display: none;">
+            
+        </div>
+    </div>
+
+    <br><br>
+
+    <center>
+        <footer>
+            <p>© 2024 GIAIC (Student: Abdul Rafay Khan)</p>
+            <p>Contact: rk8466995@gmail.com</p>
+        </footer>
+    </center>
+
+
+    <script src="resume.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-alert("Welcome to our static rusume")
+alert("Welcome to my static resume!")
 
 const toggleButton1 = document.getElementById('toggle-skills') as HTMLButtonElement;
 const skillsSection = document.getElementById('skills-section') as HTMLElement;
@@ -12,3 +12,5 @@ toggleButton1.addEventListener('click', () => {
     toggleButton1.textContent = 'Show Skills Section';
   }
 });
+
+
