@@ -14,23 +14,23 @@ form.addEventListener('submit', (e) => {
 
   resumeOutput.innerHTML = `
     <section class="personal-info">
-      <h1 class="name">${name}</h1>
-      <p class="contact-details">Email: ${email}</p>
+      <h1 class="name editable" contenteditable="true">${name}</h1>
+      <p class="contact-details editable" contenteditable="true">Email: ${email}</p>
     </section>
 
     <section class="education">
-      <h2>Education</h2>
-      <p>${education}</p>
+      <h2 class="editable" contenteditable="true">Education</h2>
+      <p class="editable" contenteditable="true">${education}</p>
     </section>
 
     <section class="skills">
-      <h2>Skills</h2>
-      <ul class="skills-list">${skills.map(skill => `<li>${skill.trim()}</li>`).join('')}</ul>
+      <h2 class="editable" contenteditable="true">Skills</h2>
+      <ul class="skills-list">${skills.map(skill => `<li class="editable" contenteditable="true">${skill.trim()}</li>`).join('')}</ul>
     </section>
 
     <section class="work-experience">
-      <h2>Work Experience</h2>
-      <p>${workExperience}</p>
+      <h2 class="editable" contenteditable="true">Work Experience</h2>
+      <p class="editable" contenteditable="true">${workExperience}</p>
     </section>
   `;
 

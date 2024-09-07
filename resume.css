@@ -23,8 +23,7 @@ section {
     margin-bottom: 30px;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -53,8 +52,7 @@ h2 {
     color: #666;
 }
 
-.education-item,
-.work-item {
+.education-item, .work-item {
     margin-bottom: 20px;
     background-color: #f9f9f9;
     padding: 15px;
@@ -134,7 +132,7 @@ form h2 {
     font-weight: 500;
 }
 
-.form-group input,
+.form-group input, 
 .form-group textarea {
     padding: 12px 15px;
     border: 1px solid #ccc;
@@ -144,7 +142,7 @@ form h2 {
     transition: all 0.3s ease;
 }
 
-.form-group input:focus,
+.form-group input:focus, 
 .form-group textarea:focus {
     border-color: #4caf50;
     outline: none;
@@ -170,6 +168,20 @@ button.submit-btn {
 
 button.submit-btn:hover {
     background-color: #0056b3;
+}
+
+/* Editable styles */
+.editable {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    cursor: text;
+}
+
+.editable:focus {
+    border-color: #4caf50;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
